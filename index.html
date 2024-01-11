@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bora discord menoses</title>
+</head>
+
+<body>
+    <div id="conteudo">
+        <div class="wrap">
+            <div class="img">
+                <img src="PXL_20230724_164656287.PORTRAIT.jpg" alt="gui" width="320" height="205">
+            </div>
+            <h2>Bora um discord?</h2>
+            <p style="color: #b5bac1;">Guilherme convida vc pra jogar no discord🤓</p>
+            <div style="margin: auto; padding: 10%;
+            justify-content: center;width: 170px;">
+                <button class="btn" style="position: fixed;display: block;" onclick="sim()">SIM</button>
+                <button style="position: absolute;" class="btn" onclick="desvia(this)" onmouseover="desvia(this)" >NÃO</button>
+            </div>
+        </div>
+    </div>
+</body>
+<style>
+    #conteudo {
+        background-color: #5865f2;
+        background-image: url(svg.svg);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        text-align: center;
+        color: white;
+        font-family: sans-serif;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .img img{
+        max-width: 200px;
+        max-height: 200px;
+        border-radius: 100%;
+    }
+
+    .wrap {
+        top: 10%;
+        background-color: #313338;
+        margin: auto;
+        padding: 20px;
+        width: 500px;
+        height: 500px;
+        border-radius: 10px;
+        position: relative;
+    }
+
+    .btn {
+        background: #5865f2;
+        color: white;
+        border: none;
+        padding: 10px;
+        width: 80px;
+        border-radius: 5px;
+    }
+</style>
+
+<script>
+    function sim() {
+        alert("Aí sim menó");
+        // redireciona para um URL após clicar no SIM
+        location.href = "https://discord.gg/vSCJz9SF";
+    }
+
+    function desvia(btn) {
+        // btn declarado na função
+        btn.style.position = 'absolute';
+        btn.style.bottom = geraPosicao(10, 90);
+        btn.style.left = geraPosicao(10, 90);
+        console.log('opa, desviei...');
+    }
+
+    function geraPosicao(min, max) {
+        return (Math.random() * (max - min) + min) + "%";
+    }
+
+</script>
+
+</html>
